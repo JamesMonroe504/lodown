@@ -7,10 +7,9 @@
  * action Function to each value in the collection.
  * 
  * @param {Array or Object} collection: The collection over which to iterate.
- * @param {Function} action: The Function to be applied to each value in the 
- * collection
+ * @param {Function} action: The Function to be applied to each value in the collection
  * 
- * Return: There is no return
+ * Return {There is no return}: There is no return
  */
 function each(collection, action) {
     if(Array.isArray(collection)) {
@@ -137,8 +136,8 @@ module.exports.last = last;
 /**
  * IndexOf: This function will find the index of the value in the array the first time it appears
  * 
- * Param {Array}: An array that will be check 
- * Param {A string value}: The value tha will be checked to see if it is in the array
+ * Param {Array}: An array that will be looked thorugh
+ * Param {A string value}: The value that will be checked to see if it is in the array
  * 
  * Returns {Number}: That value indexed position. Else it will return -1 because indexes start off at 0
  * 
