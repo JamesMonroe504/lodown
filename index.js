@@ -25,11 +25,11 @@ function each(collection, action) {
 module.exports.each = each;
 
 /**
- * Identity: function that identifies the type the data that is passed in the paramater as an argument.
+ * Identity: function that returns the value you put in right back out
  * 
- * Parameter {Takes any dataype}: it takes one parameter of any datatype
+ * @Param {Value} value: it takes one parameter of any datatype
  * 
- * Returns {That datatype}: The datatype unchanged.
+ * @Returns {value}: The value unchanged.
  * 
  */ 
 function identity(value) {
@@ -39,11 +39,11 @@ function identity(value) {
 module.exports.identity = identity;
 
 /**
- * typeOf: a function that takes in any value or datatypes and tells you what kind of data it is in a string
+ * typeOf: This will reveal the type of data we are passing in
  * 
- * Param{Any Datatype}: A value or any datatype so we can check what type of data it is
+ * @Param {Any Datatype} value: A value or any datatype so we can check what type of data it is
  * 
- * Returns{A string of that datatype}: It will return what type of data it is in a string. 
+ * @Returns {A string}: It will return what type of data it is in a string. 
  * ex. 14 = "number", null = "null" function = "function"
  * 
  *  
@@ -82,11 +82,11 @@ function typeOf(value){
 module.exports.typeOF = typeOf;
 
 /**
- * First: it takes number to see it's first occurance in  
- * Param {Array}: An array that will be check
- * Param {Number}: A number that will be checked for the first orrurence in the array
+ * First:  Returns the First element in the array
+ * @Param {Array} array: An array that will be check
+ * @Param {Number} number: Will be how many numbers starting from the first index will be return
  * 
- * Return: Return the number of the specific number in the array
+ * @Return {Array}: based on the first number or the first "number" thats in the parameter
  *  
  * 
  */
@@ -107,12 +107,12 @@ module.exports.typeOF = typeOf;
  module.exports.first = first;
 
  /**
-  * Last: Checks the array for the last occurance of the number
+  * Last: Returns the last element in the array
   * 
-  * Param {Array}: An array that will be checked.
-  * Param {Number}: A number that is checked for
+  * @Param {Array} array: An array that will be checked.
+  * @Param {Number} number: A number that represents how many places from the last wil be recorded
   * 
-  * Return: Pretty much the same thing as first. But it will all based on the last occurance for the number in the array
+  * @Return {Array}: The values in a array. the last number, or the last elements up until the "number" of places 
   * 
   */ 
   
@@ -136,10 +136,10 @@ module.exports.last = last;
 /**
  * IndexOf: This function will find the index of the value in the array the first time it appears
  * 
- * Param {Array}: An array that will be looked thorugh
- * Param {A string value}: The value that will be checked to see if it is in the array
+ * @Param {Array} array: An array that will be check 
+ * @Param {A string value} value: The value that will be checked to see if it is in the array
  * 
- * Returns {Number}: That value indexed position. Else it will return -1 because indexes start off at 0
+ * @Returns {Number}: That value indexed position. Else it will return -1 because indexes start off at 0
  * 
  * 
  */
@@ -158,12 +158,12 @@ function indexOf(array, value) {
 module.exports.indexOf = indexOf;
 
 /**
- * Contain: A function that checks to see if a value is contained inside an array
+ * Contains: A function that checks to see if a value is contained inside an array
  * 
- * Param {Array}: An array that will be looped through to see if value is contained
- * Param {Any Data types}: Value that we are checking to see if it's in the array
+ * @Param {Array} array: An array that will be looped through to see if value is contained
+ * @Param {Value} value: Value that we are checking to see if it's in the array
  * 
- * Returns {Boolean Value}: true if the value is in the array false if the value is nor in the array
+ * @Returns {Boolean}: true if the value is in the array false if the value is nor in the array
  *  
  */
  
@@ -180,9 +180,9 @@ module.exports.contains = contains;
 /**
  * Unique: Checks to see if any values are duplicates in the array and removes them
  * 
- * Param{Multiple Arrays}: An array with multiple values that are the same
+ * @Param{Multiple Arrays} array: An array with multiple values that are the same
  * 
- * Return{An array}: An updated array with the values that are not the same or duplicates
+ * @Return{An array}: An updated array with the values that are not the same or duplicates
  * 
  */
 
@@ -201,13 +201,13 @@ module.exports.unique = unique;
 /**
  * Filter function: loops through the array and puts true values inside a new empty array
  * 
- * Param {Array}: Array that will be check and looped through that function or action will take place on this array 
- * Param {Function or Action}: function or action that will be put on the array
+ * @Param {Array} array: Array that will be check and looped through that function or action will take place on this array 
+ * @Param {Function} function1: function or action that will be put on the array
  * 
  * It checks to see if values pass the test based on iterating through the array while being applied to the function that has the action it needs to check
  * The Callback function is the test that will be ran onto it and tells if the values are true or false
  * 
- * Returns{Array}: A new array with all the values that are true that passed the test
+ * @Returns{Array}: A new array with all the values that are true that passed the test
  */
      
      
@@ -228,10 +228,10 @@ module.exports.filter = filter;
 /**
  * Reject: Runs a test on a array for falsey values and places them in a new Array
  * 
- * Param {Array}: An array that will be check for falsey values that the test rejects
- * Param {Function or action}: A function or test on the array that will check for all falsey values
+ * @Param {Array} array: An array that will be check for falsey values that the test rejects
+ * @Param {Function} function1: A function or test on the array that will check for all falsey values
  * 
- * Returns{New Array}: All falsey values inside a new empty array and return that new array of falsey values
+ * @Returns{New Array}: All falsey values inside a new empty array and return that new array of falsey values
  * 
  * 
  */
@@ -249,10 +249,10 @@ module.exports.reject = reject;
 /**
  * Partition: Makes a new array of elements with truthy and falsey values
  * 
- * Param {Array}: array that the action will take place on
- * Param {Function or Action}: The funciton or action that will take place on the array
+ * @Param {Array} array: array that the action will take place on
+ * @Param {Function or Action} function1: The funciton or action that will take place on the array
  * 
- * Returns {New Array}: A new array of an array of both truthy values in an array that passed and falsey values in an array that passed into one big Array
+ * @Returns {New Array}: A new array of an array of both truthy values in an array that passed and falsey values in an array that passed into one big Array
  * 
  */ 
 
@@ -276,11 +276,11 @@ module.exports.partition = partition;
  *      The function will have three elements so it can map or search through them. 
  *      The element or the value, the i or the index, and the entire collection itself.
  * 
- * Param {Collection or Array}: Collection either of array or objects that will be tested on 
- * Param {Function or Action}: function or test that will be applied on each element in the collection
+ * @Param {Collection or Array} collection: Collection either of array or objects that will be tested on 
+ * @Param {Function} function1: function or test that will be applied on each element in the collection
  * 
  * 
- * Returns {New Array}: A new array with updated vales after the action has been applied to the previous value 
+ * @Returns {New Array}: A new array with updated vales after the action has been applied to the previous value 
  * 
  * 
  */
@@ -301,10 +301,10 @@ module.exports.map = map;
  *        If the key exists then the values will be pushed inside a new array
  *        If multiple objects exists then it will go the the next Object and use the value at the new object and remove the old value
  * 
- * Param {Array}: An array that will be iterated through
- * Param {A String}: with The prop or key of the object you are searching for
+ * @Param {Array} array: An array that will be iterated through
+ * @Param {A String} prop: with The prop or key of the object you are searching for
  * 
- * Returns {A New Array}: An array with the same vales inside a new array
+ * @Returns {A New Array}: An array with the same vales inside a new array
  *  
  */
  
@@ -323,10 +323,10 @@ module.exports.pluck = pluck;
  *      If there is no callback function it will return false 
  *      If there is one element that's false it will return false
  * 
- * Param {Collection}: Collection to be iterated over
- * Param {Function or Action}: function or test to be tested for the values in the collection
+ * @Param {Collection} collection: Collection to be iterated over
+ * @Param {Function} function1: function or test to be tested for the values in the collection
  * 
- * Returns {Boolean Value}: true if all the elements pass the test else it returns false
+ * @Returns {Boolean Value}: true if all the elements pass the test else it returns false
  *  
  * 
  */ 
@@ -364,10 +364,10 @@ module.exports.every = every;
  *      The element or the value, the i or the index, and the entire collection itself.
  *      If there is no callback function it will return true
  * 
- * Param {Collection}: Collection that will be iterated through
- * Param {Function or Action}: function or test that will pass through the collection.
+ * @Param {Collection} collection: Collection that will be iterated through
+ * @Param {Function} function1: function or test that will pass through the collection.
  * 
- * Returns {Boolean Value}: true if any of the value passes the test
+ * @Returns {Boolean Value}: true if any of the value passes the test
  * 
  * 
  */
@@ -416,12 +416,12 @@ module.exports.some = some;
  * With a seed (which should always be the same datatype as the value you're returning) it will be the first indexed value
  * 
  * 
- * Param {Array or Object}: An array or object that will be looped through
- * Param {Function or Action}: an action or function 
- * Param {Datatype you want to return}: The Start value or Seed (which is optional)
+ * @Param {Array or Object} array: An array or object that will be looped through
+ * @Param {Function} action: an action or function 
+ * @Param {Value} startvalue: The Start value or Seed (which is optional)
  * 
- * Return{Datatype of Seed, or datatype of the StartValue}: it will return the dataype of whatever the initial start value is, or the seed if you give it a seed.
- * 
+ * @Return{Value}: it will return the dataype of whatever the initial start value is, or the seed if you give it a seed.
+ * Always is a number unless changed with a seed or start value.
  * 
  */
  
@@ -449,9 +449,9 @@ module.exports.reduce = reduce;
  *          If the key does not exist then it will be added to the object
  *          It will not make a new object just update the info from the first one
  * 
- * Param {Multiple Objects}: multiple objects
+ * @Param {Multiple Objects} copyTo: multiple objects
  * 
- * Returns {Object}: the Updated first object
+ * @Returns {Object}: the Updated first object
  * 
  */
  
