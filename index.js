@@ -82,7 +82,7 @@ function typeOf(value){
 module.exports.typeOF = typeOf;
 
 /**
- * First:  Returns the First element in the array
+ * First:  Returns the First element in the array until the number in the parameter of elements
  * @Param {Array} array: An array that will be check
  * @Param {Number} number: Will be how many numbers starting from the first number will be return
  * 
@@ -107,7 +107,7 @@ module.exports.typeOF = typeOf;
  module.exports.first = first;
 
  /**
-  * Last: Returns the last element in the array
+  * Last: Returns the last element in the array until the number thats in the parameter
   * 
   * @Param {Array} array: An array that will be checked.
   * @Param {Number} number: A number that represents how many places from the last wil be recorded
