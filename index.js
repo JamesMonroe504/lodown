@@ -84,9 +84,9 @@ module.exports.typeOF = typeOf;
 /**
  * First:  Returns the First element in the array
  * @Param {Array} array: An array that will be check
- * @Param {Number} number: Will be how many numbers starting from the first index will be return
+ * @Param {Number} number: Will be how many numbers starting from the first number will be return
  * 
- * @Return {Array}: based on the first number or the first "number" thats in the parameter
+ * @Return {Number}: based on the first number through the number given in the function
  *  
  * 
  */
@@ -112,7 +112,7 @@ module.exports.typeOF = typeOf;
   * @Param {Array} array: An array that will be checked.
   * @Param {Number} number: A number that represents how many places from the last wil be recorded
   * 
-  * @Return {Array}: The values in a array. the last number, or the last elements up until the "number" of places 
+  * @Return {Number}: The last number through the given number(the number you put in the function) of elements  
   * 
   */ 
   
@@ -296,15 +296,14 @@ module.exports.partition = partition;
 module.exports.map = map;
 
 /**
- * Pluck: An object inside an array
+ * Pluck: It extracts the array or list of an object thats given
  *        Searches through the object inside the array to see if the property exists
  *        If the key exists then the values will be pushed inside a new array
- *        If multiple objects exists then it will go the the next Object and use the value at the new object and remove the old value
  * 
  * @Param {Array} array: An array that will be iterated through
  * @Param {A String} prop: with The prop or key of the object you are searching for
  * 
- * @Returns {A New Array}: An array with the same vales inside a new array
+ * @Returns {A New Array}: An array with the values we were searching for inside a new array
  *  
  */
  
@@ -320,7 +319,7 @@ module.exports.pluck = pluck;
  * Every: Function that will return true if every element is true
  *      The function will have three elements so it can map through them. 
  *      The element or the value, the i or the index, and the entire collection itself.
- *      If there is no callback function it will return false 
+ *      If there is no callback function it will check the truthyness and falsyness of each value and if every value is truthy, it will return true. 
  *      If there is one element that's false it will return false
  * 
  * @Param {Collection} collection: Collection to be iterated over
@@ -362,7 +361,8 @@ module.exports.every = every;
  * Some: A function that will return true if some (or if any meaning 1) of the values are contained in the collection 
  *      The function will have three elements so it can map through them. 
  *      The element or the value, the i or the index, and the entire collection itself.
- *      If there is no callback function it will return true
+ *      If there's no callback function it will check the truthyness and falsyness of each value 
+ *      and if one value is truthy in some, then it will return true.
  * 
  * @Param {Collection} collection: Collection that will be iterated through
  * @Param {Function} function1: function or test that will pass through the collection.
@@ -410,7 +410,7 @@ function some(collection, function1) {
 module.exports.some = some;
 
 /**
- * Reduce: A function that runs test on every element  that has passed the test 
+ * Reduce: Calls a function for every element and uses the return value from the function as it previous result
  * and accumlates value from the previous result so you can carry it over or manipulate it
  * Without a seed the previous value will start at the first index element in the array
  * With a seed (which should always be the same datatype as the value you're returning) it will be the first indexed value
